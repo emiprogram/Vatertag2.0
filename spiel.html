@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Finde den Bug!</title>
+  <style>
+    body {
+      font-family: monospace;
+      background-color: #1e1e1e;
+      color: #d4d4d4;
+      padding: 40px;
+      text-align: center;
+    }
+    .code-box {
+      background-color: #2d2d2d;
+      text-align: left;
+      padding: 20px;
+      border-radius: 8px;
+      display: inline-block;
+      margin: 20px auto;
+      font-size: 1em;
+      width: 400px;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 1em;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      background-color: #007acc;
+      color: white;
+    }
+    button:hover {
+      background-color: #005f99;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎮 Find the Bug – Programmierspiel</h1>
+  <p>Welcher Teil des Codes ist falsch?</p>
+
+  <div class="code-box">
+    <pre>
+function greet(name) {
+  if name == "Horst" {
+    console.log("Hallo " + name);
+  }
+}</pre>
+  </div>
+
+  <div>
+    <button onclick="checkAnswer('a')">A: Klammern fehlen bei if</button><br>
+    <button onclick="checkAnswer('b')">B: falscher Funktionsname</button><br>
+    <button onclick="checkAnswer('c')">C: console.log ist falsch</button>
+  </div>
+
+  <p id="result"></p>
+
+  <script>
+    function checkAnswer(answer) {
+      const result = document.getElementById("result");
+      if (answer === "a") {
+        result.innerText = "✅ Richtig! Gute Augen, Horst!";
+      } else {
+        result.innerText = "❌ Leider falsch – versuch's nochmal!";
+      }
+    }
+  </script>
+</body>
+</html>
