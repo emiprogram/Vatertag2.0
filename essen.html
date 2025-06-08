@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Was möchtest du essen?</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f9f9f9;
+      text-align: center;
+      padding: 40px;
+    }
+    form {
+      background: white;
+      display: inline-block;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    input, select, textarea {
+      display: block;
+      width: 300px;
+      margin: 10px auto;
+      padding: 10px;
+      font-size: 1em;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1em;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>Was darf ich dir kochen, Papa? 🍽️</h1>
+  <form action="https://formspree.io/f/your-form-id" method="POST">
+    <label for="gericht">Wähle ein Gericht:</label>
+    <select name="gericht" id="gericht">
+      <option value="Pizza">Pizza</option>
+      <option value="Schnitzel">Schnitzel</option>
+      <option value="Spaghetti">Spaghetti</option>
+      <option value="Überrasch mich!">Überrasch mich!</option>
+    </select>
+
+    <label for="wunsch">Noch ein Wunsch?</label>
+    <textarea name="wunsch" id="wunsch" placeholder="Z. B. mit extra Käse..." rows="4"></textarea>
+
+    <button type="submit">Absenden</button>
+  </form>
+</body>
+</html>
